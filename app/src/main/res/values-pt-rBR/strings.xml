@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GamesApplication</string>
+    <string name="welcome">Bem-vindo!</string>
+    <string name="developer">Desenvolvido por DS2M</string>
+    <string name="text_subtitle">Com o nosso aplcativo sera muito mais fácil e divertido manter o controle dos seus games!</string>
+    <string name="login">Login</string>
+    <string name="logar">Entrar</string>
+    <string name="create_account">Crie uma conta</string>
+    <string name="to_remember">Relembre-me</string>
+    <string name="email">E-mail</string>
+    <string name="pass">Senha</string>
+    <string name="new_account">Nova conta</string>
+    <string name="insert_photo">Vamos escolher uma foto?</string>
+    <string name="data_authentication">Dados para autenticação</string>
+    <string name="person_data">Dados pessoais</string>
+    <string name="name">Qual o seu nome?</string>
+    <string name="city">Qual é a sua cidade?</string>
+    <string name="birthday">Data de nascimento</string>
+    <string name="level_gamer">Qual o seu nível gamer?</string>
+    <string name="level_string">Casual</string>
+    <string name="console_gamer">Qual o seu console preferido?</string>
+    <string name="sex">Sexo:</string>
+    <string name="masc">Masculino</string>
+    <string name="fem">Feminino</string>
+    <string name="save">Salvar</string>
+    <string name="configuration">Configurações</string>
+    <string name="exit">Sair</string>
+    <string name="games_finished">Jogos Finalizados</string>
+    <string name="currently_playing">Jogando</string>
+    <string name="age">Age</string>
+    <string name="show_level">Displayed Level</string>
+    <string name="username">Username</string>
+    <string name="user_email">user@email</string>
+    <string name="games">Games</string>
+    <string name="registered_games">Your registered games</string>
+    <string-array name="console">
+        <item>Nintendo Switch</item>
+        <item>PlayStation 5</item>
+        <item>PlayStation 4</item>
+        <item>PlayStation 3</item>
+        <item>PlayStation 2</item>
+        <item>PlayStation 1</item>
+        <item>Nintendo Switch</item>
+        <item>XBox One</item>
+        <item>XBox One S</item>
+        <item>XBox One X</item>
+        <item>XBox Series S</item>
+        <item>XBox Series X</item>
+        <item>Xbox 360</item>
+    </string-array>
+</resources>
