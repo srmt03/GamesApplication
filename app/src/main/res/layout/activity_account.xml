@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AccountActivity">
+    tools:context=".ui.AccountActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout4"
@@ -209,6 +209,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGames"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"

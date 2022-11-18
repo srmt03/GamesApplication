@@ -1,12 +1,12 @@
-package br.senai.sp.jandira.gamesapplication
+package br.senai.sp.jandira.gamesapplication.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.inputmethod.InputBinding
 import android.widget.Toast
+import br.senai.sp.jandira.gamesapplication.R
 import br.senai.sp.jandira.gamesapplication.databinding.ActivitySignupBinding
 
 class SignupActivity : AppCompatActivity() {

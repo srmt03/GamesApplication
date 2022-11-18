@@ -5,7 +5,7 @@ import br.senai.sp.jandira.gamesapplication.dao.console.ConsoleDb
 import br.senai.sp.jandira.gamesapplication.model.Console
 
 class ConsoleRepository(context: Context) {
-    private val db = ConsoleDb.getDatabase(context).consoleDao()
+    private val db = ConsoleDb.getDataBase(context).consoleDao()
 
     fun save (console: Console): Long {
         return db.save(console)

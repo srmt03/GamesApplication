@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignupActivity">
+    tools:context=".ui.SignupActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
@@ -251,9 +251,10 @@
             <Spinner
                 android:id="@+id/spinnerConsole"
                 android:layout_width="0dp"
-                android:layout_height="30dp"
+                android:layout_height="48dp"
                 android:layout_marginTop="8dp"
                 android:backgroundTint="@color/grey"
+                android:entries="@array/console"
                 app:layout_constraintEnd_toEndOf="@+id/editTextDate"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/textView11"

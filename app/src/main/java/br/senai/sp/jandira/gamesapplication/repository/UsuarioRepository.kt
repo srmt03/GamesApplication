@@ -2,24 +2,27 @@ package br.senai.sp.jandira.gamesapplication.repository
 
 import android.content.Context
 import br.senai.sp.jandira.gamesapplication.dao.console.ConsoleDb
+import br.senai.sp.jandira.gamesapplication.dao.usuario.UsuarioDb
 import br.senai.sp.jandira.gamesapplication.model.Console
+import br.senai.sp.jandira.gamesapplication.model.Games
+import br.senai.sp.jandira.gamesapplication.model.Usuario
 
 class UsuarioRepository(context: Context) {
-    private val db = ConsoleDb.getDatabase(context).consoleDao()
+    private val db = UsuarioDb.getDataBase(context).usuarioDao()
 
-    fun save (console: Console): Long {
-        return db.save(console)
+    fun save (usuario: Usuario): Long {
+        return db.save(usuario)
     }
-    fun update (console: Console): Int {
-        return db.update(console)
+    fun update (usuario: Usuario): Int {
+        return db.update(usuario)
     }
-    fun delete (console: Console): Int {
-        return db.delete(console)
+    fun delete (usuario: Usuario): Int {
+        return db.delete(usuario)
     }
-    fun getAll (): List<Console> {
+    fun getAll (): List<Usuario> {
         return db.getAll()
     }
-    fun getConsoleById (id: Int): Console {
-        return db.getConsoleById(id)
+    fun getUsuarioById (id: Int): Usuario {
+     return db.getUsuarioById(id)
     }
 }

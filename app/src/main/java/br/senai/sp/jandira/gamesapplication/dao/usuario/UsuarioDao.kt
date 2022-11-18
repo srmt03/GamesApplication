@@ -1,12 +1,10 @@
 package br.senai.sp.jandira.gamesapplication.dao.usuario
 
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 import br.senai.sp.jandira.gamesapplication.model.Console
 import br.senai.sp.jandira.gamesapplication.model.Usuario
 
+@Dao
 interface UsuarioDao {
     //CRUID USUARIO
     @Insert

@@ -12,7 +12,7 @@ abstract class ConsoleDb: RoomDatabase() {
     abstract fun consoleDao(): ConsoleDao
     companion object {
         private lateinit var instance: ConsoleDb
-        fun getDatabase(context: Context): ConsoleDb{
+        fun getDataBase(context: Context): ConsoleDb{
             if (!::instance.isInitialized){
                 instance = Room.databaseBuilder(context, ConsoleDb::class.java, "db_console").allowMainThreadQueries().build()
             }
