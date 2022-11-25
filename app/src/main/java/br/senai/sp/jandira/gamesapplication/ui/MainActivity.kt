@@ -6,10 +6,11 @@ import android.os.Bundle
 import android.widget.Toast
 import br.senai.sp.jandira.gamesapplication.dao.usuario.UsuarioDb.Companion.getDataBase
 import br.senai.sp.jandira.gamesapplication.databinding.ActivityMainBinding
+import br.senai.sp.jandira.gamesapplication.repository.UsuarioRepository
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-
+    private lateinit var userRepository: UsuarioRepository
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar!!.hide()
@@ -25,28 +26,26 @@ class MainActivity : AppCompatActivity() {
             login()
         }
     }
-    private fun login() {
+    private fun login(): Boolean {
         if (validar()){
-            val email = binding.editTextEmail.text.toString()
-            val pass = binding.editTextPassword.text.toString()
-
-            //Abrir o (SharedPreferences) - BANCO DE DADOS!
-            val dados = getDataBase(this)
-
-            val emailBD = dados.usuarioDao()
-            val passBD = dados.usuarioDao()
-
-            //val emailBD = dados.getString("email", "E-mail não encontrado")
-            //val passBD = dados.getString("password", "")
+            val emailInput = binding.editTextEmail.text.toString()
+            userRepository = UsuarioRepository(this)
+            val user = userRepository.getUsuarioByEmail(emailInput)
 
             //Verificar se os dados de autenticacao estão corretos
-//            if (email == emailBD && pass == passBD){
-//                val openAccount = Intent(this, AccountActivity::class.java)
-//                startActivity(openAccount)
-//            } else {
-//                Toast.makeText(this, "Authentication failed!", Toast.LENGTH_SHORT).show()
-//            }
+            if (user === null) {
+                Toast.makeText(this, "Authentication failed!", Toast.LENGTH_SHORT).show()
+                return false
+            } else if (user.senha != binding.editTextPassword.text.toString()) {
+                Toast.makeText(this, "Authentication failed!", Toast.LENGTH_SHORT).show()
+                return false
+            } else {
+                val openAccountActivity = Intent(this, AccountActivity::class.java)
+                startActivity(openAccountActivity)
+            }
+            return true
         }
+        return false
     }
     private fun validar(): Boolean {
         if (binding.editTextEmail.text.isEmpty()){
@@ -59,5 +58,4 @@ class MainActivity : AppCompatActivity() {
         }
         return true
     }
-
 }

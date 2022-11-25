@@ -19,13 +19,13 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
             android:layout_marginBottom="42dp"
             android:text="@string/new_account"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -115,7 +115,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <EditText
-                android:id="@+id/editTextTextEmailAddress2"
+                android:id="@+id/editEmail"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -131,7 +131,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
             <EditText
-                android:id="@+id/editTextTextPassword2"
+                android:id="@+id/editPass"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -141,10 +141,10 @@
                 android:inputType="textPassword"
                 android:minHeight="48dp"
                 android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress2"
+                app:layout_constraintEnd_toEndOf="@+id/editEmail"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress2"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
+                app:layout_constraintStart_toStartOf="@+id/editEmail"
+                app:layout_constraintTop_toBottomOf="@+id/editEmail" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -157,11 +157,11 @@
                 android:textColor="@color/azul_write"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextPassword2"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+                app:layout_constraintStart_toStartOf="@+id/editPass"
+                app:layout_constraintTop_toBottomOf="@+id/editPass" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/editName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -176,7 +176,7 @@
 
 
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/editCity"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -184,13 +184,13 @@
                 android:hint="@string/city"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
-                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/editName"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+                app:layout_constraintStart_toStartOf="@+id/editName"
+                app:layout_constraintTop_toBottomOf="@+id/editName" />
 
             <EditText
-                android:id="@+id/editTextDate"
+                android:id="@+id/editDate"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -198,9 +198,9 @@
                 android:hint="@string/birthday"
                 android:inputType="date"
                 android:minHeight="48dp"
-                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+                app:layout_constraintEnd_toEndOf="@+id/editCity"
+                app:layout_constraintStart_toStartOf="@+id/editCity"
+                app:layout_constraintTop_toBottomOf="@+id/editCity" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -209,22 +209,22 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/level_gamer"
                 android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="@+id/editTextDate"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+                app:layout_constraintStart_toStartOf="@+id/editDate"
+                app:layout_constraintTop_toBottomOf="@+id/editDate" />
 
             <com.google.android.material.slider.Slider
-                android:id="@+id/slider"
+                android:id="@+id/sliderLevel"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:stepSize="1"
                 android:valueFrom="1"
-                android:valueTo="27"
-                app:layout_constraintStart_toStartOf="@+id/editTextDate"
+                android:valueTo="4"
+                app:layout_constraintStart_toStartOf="@+id/editDate"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/textViewLevel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/level_string"
@@ -232,10 +232,10 @@
                 android:textColor="@color/azul_main"
                 android:textSize="28sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/slider"
-                app:layout_constraintEnd_toEndOf="@+id/editTextDate"
+                app:layout_constraintBottom_toBottomOf="@+id/sliderLevel"
+                app:layout_constraintEnd_toEndOf="@+id/editDate"
                 app:layout_constraintHorizontal_bias="0.536"
-                app:layout_constraintStart_toEndOf="@+id/slider"
+                app:layout_constraintStart_toEndOf="@+id/sliderLevel"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
             <TextView
@@ -245,8 +245,8 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/console_gamer"
                 android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="@+id/slider"
-                app:layout_constraintTop_toBottomOf="@+id/slider" />
+                app:layout_constraintStart_toStartOf="@+id/sliderLevel"
+                app:layout_constraintTop_toBottomOf="@+id/sliderLevel" />
 
             <Spinner
                 android:id="@+id/spinnerConsole"
@@ -255,7 +255,7 @@
                 android:layout_marginTop="8dp"
                 android:backgroundTint="@color/grey"
                 android:entries="@array/console"
-                app:layout_constraintEnd_toEndOf="@+id/editTextDate"
+                app:layout_constraintEnd_toEndOf="@+id/editDate"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/textView11"
                 app:layout_constraintTop_toBottomOf="@+id/textView11" />
@@ -270,14 +270,14 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView12">
 
                 <RadioButton
-                    android:id="@+id/radioButton"
+                    android:id="@+id/radioButtonM"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/masc" />
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/radioButtonF"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

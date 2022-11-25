@@ -15,6 +15,7 @@ import org.w3c.dom.Text
 class GamesAdapter(var gamesList: List<Games>, var context: Context):RecyclerView.Adapter<GamesAdapter.GamesHolder>() {
     fun updateGamesList(newGameList: List<Games>) {
         this.gamesList = newGameList
+//        notifyDataSetChanged() #####
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GamesHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.holder_layout, parent, false)
@@ -37,6 +38,6 @@ class GamesAdapter(var gamesList: List<Games>, var context: Context):RecyclerVie
         val textViewTitulo: TextView = view.findViewById(R.id.textViewNome)
         val textViewEstudio: TextView = view.findViewById(R.id.textViewEstudio)
         val textViewDescricao: TextView = view.findViewById(R.id.textViewDescricao)
-        val imageViewHolder: ImageView = view.findViewById(R.id.imageHolder)
+        //val imageViewHolder: ImageView = view.findViewById(R.id.imageHolder)
     }
 }
