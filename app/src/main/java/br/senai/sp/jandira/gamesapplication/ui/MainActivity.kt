@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import br.senai.sp.jandira.gamesapplication.dao.usuario.UsuarioDb.Companion.getDataBase
 import br.senai.sp.jandira.gamesapplication.databinding.ActivityMainBinding
+import br.senai.sp.jandira.gamesapplication.model.Usuario
 import br.senai.sp.jandira.gamesapplication.repository.UsuarioRepository
 
 class MainActivity : AppCompatActivity() {
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
                 return false
             } else {
                 val openAccountActivity = Intent(this, AccountActivity::class.java)
+                openAccountActivity.putExtra("id", user.id)
                 startActivity(openAccountActivity)
             }
             return true

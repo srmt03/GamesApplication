@@ -34,6 +34,9 @@
     <string name="user_email">user@email</string>
     <string name="games">Games</string>
     <string name="registered_games">Your registered games</string>
+    <string name="game_status">Games finished?</string>
+    <string name="registration_game" />
+    <string name="game_register">Register your game!</string>
     <string-array name="console">
         <item>Nintendo Switch</item>
         <item>PlayStation 5</item>

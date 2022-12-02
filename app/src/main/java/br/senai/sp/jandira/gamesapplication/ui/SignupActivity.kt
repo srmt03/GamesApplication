@@ -71,7 +71,7 @@ class SignupActivity : AppCompatActivity() {
             usuario.senha = binding.editPass.text.toString()
             usuario.nome = binding.editName.text.toString()
             usuario.cidade = binding.editCity.text.toString()
-            usuario.dataNascimento = binding.editDate.text.toString()
+            usuario.idade = binding.editDate.text.toString()
 
             //Instancia do repositorio
             usuarioRepository = UsuarioRepository(this)

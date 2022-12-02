@@ -6,4 +6,152 @@
     android:layout_height="match_parent"
     tools:context=".ui.AddGamesActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout8"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@drawable/ic_wave_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@drawable/ic_wave_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/imageGame"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:srcCompat="@drawable/ic_camera_alt" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/game_register"
+        android:textColor="@color/azul_main"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8" />
+
+    <EditText
+        android:id="@+id/editTextNameGame"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/edit_background"
+        android:ems="10"
+        android:hint="Enter your game name..."
+        android:inputType="textPersonName"
+        android:paddingLeft="12dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageGame" />
+
+    <EditText
+        android:id="@+id/editTextDescriptionGame"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_background"
+        android:ems="10"
+        android:hint="Game description..."
+        android:inputType="textPersonName"
+        android:paddingLeft="12dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNameGame"
+        app:layout_constraintStart_toStartOf="@+id/editTextNameGame"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNameGame" />
+
+    <EditText
+        android:id="@+id/editTextStudioGame"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_background"
+        android:ems="10"
+        android:hint="Game production studio..."
+        android:inputType="textPersonName"
+        android:paddingLeft="12dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextDescriptionGame"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextDescriptionGame"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescriptionGame" />
+
+    <EditText
+        android:id="@+id/editTextDateGame"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_background"
+        android:ems="10"
+        android:hint="Game release date..."
+        android:inputType="date"
+        android:paddingLeft="12dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextStudioGame"
+        app:layout_constraintStart_toStartOf="@+id/editTextStudioGame"
+        app:layout_constraintTop_toBottomOf="@+id/editTextStudioGame" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/game_status"
+        android:textColor="@color/azul_write"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/editTextDateGame"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDateGame" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView16">
+
+        <RadioButton
+            android:id="@+id/radioButtonYes"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Yes" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNo"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="No" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonSaveGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="@+id/editTextDateGame"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,7 +20,8 @@ class Usuario {
 
     @ColumnInfo(name = "data_nascimento")
     //var dataNascimento:LocalDate? = null
-    var dataNascimento = ""
+//    var dataNascimento = ""
+    var idade = ""
 
     var nivel = NiveisEnum.INICIANTE
 
